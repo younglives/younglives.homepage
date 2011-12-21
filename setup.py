@@ -1,22 +1,21 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.0'
+version = open(os.path.join("collective", "wfform", "version.txt")).read().strip()
 
 setup(name='younglives.homepage',
       version=version,
       description="",
-      long_description=open("README.txt").read() + "\n" +
+      long_description=open(os.path.join("docs", "README.txt")).read() + "\n" +
+                       open(os.path.join("docs", "INSTALL.txt")).read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
-      # Get more strings from
-      # http://pypi.python.org/pypi?:action=list_classifiers
       classifiers=[
         "Framework :: Plone",
         "Programming Language :: Python",
         ],
       keywords='',
-      author='',
-      author_email='',
+      author='Michael Davis',
+      author_email='m.r.davis@cranfield.ac.uk',
       url='http://svn.plone.org/svn/collective/',
       license='gpl',
       packages=find_packages(exclude=['ez_setup']),
@@ -25,7 +24,6 @@ setup(name='younglives.homepage',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          # -*- Extra requirements: -*-
       ],
       entry_points="""
       # -*- Entry points: -*-
@@ -33,6 +31,4 @@ setup(name='younglives.homepage',
       [z3c.autoinclude.plugin]
       target = plone
       """,
-      setup_requires=["PasteScript"],
-      paster_plugins=["ZopeSkel"],
-      )
+)
