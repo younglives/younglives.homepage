@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = open(os.path.join("collective", "wfform", "version.txt")).read().strip()
+version = open(os.path.join("younglives", "homepage", "version.txt")).read().strip()
 
 setup(name='younglives.homepage',
       version=version,
