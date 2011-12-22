@@ -24,6 +24,7 @@ setup(name='younglives.homepage',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'Products.OrderableReferenceField',
       ],
       entry_points="""
       # -*- Entry points: -*-
