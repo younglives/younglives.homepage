@@ -1,6 +1,7 @@
 from Products.Archetypes.atapi import process_types, listTypes
 from Products.CMFCore.utils import ContentInit
 
+from content.homepage import HomePage
 from config import PROJECTNAME
 
 from zope.i18nmessageid import MessageFactory
