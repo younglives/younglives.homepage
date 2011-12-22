@@ -15,4 +15,12 @@
       layer=".interfaces.IYounglivesHomepage"
       />
 
+    <browser:page 
+        for="younglives.homepage.interfaces.IHomePage"
+        name="homepage_view"
+        class=".homepage.HomePageView"
+        template="homepage.pt"
+        permission="zope.Public"
+      />
+
 </configure>
