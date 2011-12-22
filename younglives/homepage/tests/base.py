@@ -12,6 +12,8 @@ class TestCase(PloneSandboxLayer):
 
     def setUpZope(self, app, configurationContext):
         # Load ZCML
+        import Products.OrderableReferenceField
+        self.loadZCML(package=Products.OrderableReferenceField)
         import younglives.homepage
         self.loadZCML(package=younglives.homepage)
 
