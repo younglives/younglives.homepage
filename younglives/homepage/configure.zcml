@@ -7,13 +7,4 @@
 
   <five:registerPackage package="." initialize=".initialize" />
 
-  <genericsetup:registerProfile
-      name="default"
-      title="younglives.homepage"
-      directory="profiles/default"
-      description="Installs the younglives.homepage package"
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      />
-  <!-- -*- extra stuff goes here -*- -->
-  
 </configure>
