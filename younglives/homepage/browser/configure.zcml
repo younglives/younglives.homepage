@@ -1,0 +1,18 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="younglives.homepage">
+
+  <browser:resourceDirectory
+      name="younglives.homepage.stylesheets"
+      directory="stylesheets"
+      layer=".interfaces.IYounglivesHomepage"
+      />
+
+  <browser:resourceDirectory
+      name="younglives.homepage.images"
+      directory="images"
+      layer=".interfaces.IYounglivesHomepage"
+      />
+
+</configure>
