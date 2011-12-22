@@ -13,7 +13,6 @@ from archetypes.referencebrowserwidget.widget import ReferenceBrowserWidget
 from Products.OrderableReferenceField import OrderableReferenceField, OrderableReferenceWidget
 
 from younglives.content import _
-from younglives.content.interfaces import IHomePage
 from younglives.content.interfaces import IHomepageBoxMarker, IHomepageHeroMarker
 
 HomePageSchema = ATContentTypeSchema.copy() + Schema((
