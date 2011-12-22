@@ -31,7 +31,7 @@ HomePageSchema = ATContentTypeSchema.copy() + Schema((
             rows = 2)),
             
     OrderableReferenceField('homeRotatorImages',
-        required = 1,
+        required = 0,
         multiValued = 1,
         relationship = 'relatedHomepageRotatorImages',
         widget = ReferenceBrowserWidget(
