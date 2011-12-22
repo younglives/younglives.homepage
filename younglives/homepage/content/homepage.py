@@ -4,12 +4,13 @@ from Products.Archetypes.atapi import registerType
 from Products.ATContentTypes.content.base import ATCTContent
 
 from younglives.homepage.config import PROJECTNAME
+from younglives.homepage.interfaces import IHomePage
 
 from schemata import HomePageSchema
 
 class HomePage(ATCTContent):
     """ YoungLives homepage archetype. """
-    #implements(IHomePage)
+    implements(IHomePage)
 
     meta_type = "HomePage"
     schema = HomePageSchema
