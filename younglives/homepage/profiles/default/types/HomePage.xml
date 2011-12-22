@@ -6,7 +6,7 @@
     <property name="title" i18n:translate="">HomePage</property>
     <property name="description"
         i18n:translate="">Young Lives homepage content type</property>
-    <property name="icon_expr"></property>
+    <property name="icon_expr">string:$portal_url/++resource++younglives.homepage.images/homepage_icon.png</property>
     <property name="content_meta_type">HomePage</property>
     <property name="product">younglives.homepage</property>
     <property name="factory">addHomePage</property>
