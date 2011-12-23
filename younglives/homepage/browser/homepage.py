@@ -10,20 +10,17 @@ from Products.Five import BrowserView
 from plone.memoize import view
 
 # local
-from younglives.content.interfaces import IHomePageView 
+from interfaces import IHomePageView 
 from younglives.content.interfaces import IHomepageBoxAware, IHomepageHeroMarker
-
 
 class HomePageView(BrowserView):
     implements(IHomePageView)
-    
     
     @view.memoize
     def html_description(self):
         portal_transforms = getToolByName(self.context, 'portal_transforms')
         return portal_transforms.convert('text_to_html', 
                                          self.context.Description())
-      
         
     @view.memoize   
     def homepage_boxes(self):
@@ -42,7 +39,6 @@ class HomePageView(BrowserView):
                 items.append(item)
         
         return items
-
   
     @view.memoize 
     def homepage_news(self):
@@ -60,7 +56,6 @@ class HomePageView(BrowserView):
         
         return item
 
-
     @view.memoize
     def boxes(self):
         wtool = getToolByName(self.context, 'portal_workflow')
@@ -74,8 +69,6 @@ class HomePageView(BrowserView):
                 links = [{'title':x.Title,'url':x.absolute_url} for x in links],))
         return results
 
-
     def rotator_images(self):
         ctool = getToolByName(self.context, 'portal_catalog')
         return ctool(UID=self.context.getRawHomeRotatorImages())
-  
