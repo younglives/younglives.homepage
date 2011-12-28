@@ -3,5 +3,6 @@
   <version>1000</version>
     <dependencies>
         <dependency>profile-Products.OrderableReferenceField:default</dependency>
+        <dependency>profile-Products.Carousel:default</dependency>
     </dependencies>
 </metadata>

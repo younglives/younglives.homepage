@@ -25,6 +25,7 @@ setup(name='younglives.homepage',
       install_requires=[
           'setuptools',
           'Products.OrderableReferenceField',
+          'Products.Carousel',
       ],
       entry_points="""
       # -*- Entry points: -*-
