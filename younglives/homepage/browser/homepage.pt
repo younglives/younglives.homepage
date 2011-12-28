@@ -21,7 +21,7 @@
             
         <div id="intro">
         
-            <p tal:replace="structure view/html_description" />
+            <p tal:content="structure context/text" />
                 
             <div class="quote">
                 <blockquote tal:content="context/getHomeQuote|nothing" />

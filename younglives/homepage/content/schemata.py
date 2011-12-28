@@ -2,6 +2,7 @@ from Products.Archetypes.atapi import AnnotationStorage
 from Products.Archetypes.atapi import ImageField
 from Products.Archetypes.atapi import ImageWidget
 from Products.Archetypes.atapi import ReferenceField
+from Products.Archetypes.atapi import RichWidget
 from Products.Archetypes.atapi import Schema
 from Products.Archetypes.atapi import StringWidget
 from Products.Archetypes.atapi import TextAreaWidget
@@ -16,7 +17,19 @@ from younglives.homepage import _
 from younglives.content.interfaces import IHomepageBoxMarker, IHomepageHeroMarker
 
 HomePageSchema = ATContentTypeSchema.copy() + Schema((
-                                                          
+
+    TextField('text',
+        required=False,
+        searchable=True,
+        primary=True,
+        validators = ('isTidyHtmlWithCleanup',),
+        default_output_type = 'text/x-html-safe',
+        widget = RichWidget(
+            description = '',
+            label = _(u'label_body_text', default=u'Body Text'),
+            rows = 25,),
+    ),
+
     TextField("homeQuote",
         required = 0,
         searchable = 1,
@@ -28,25 +41,7 @@ HomePageSchema = ATContentTypeSchema.copy() + Schema((
             description = _(u"subsite_quote_desc",
                             default = u"Enter homepage quote."),
             rows = 2)),
-            
-    OrderableReferenceField('homeRotatorImages',
-        required = 0,
-        multiValued = 1,
-        relationship = 'relatedHomepageRotatorImages',
-        widget = ReferenceBrowserWidget(
-            allow_sorting = 1,          
-            hide_inaccessible = 1,
-            force_close_on_insert = 0,
-            allow_search = 0, 
-            allow_browse = 0,
-            show_review_state = 1,
-            image_portal_types = ('Page','Publication'),
-            image_method = 'homepageHeroImage_thumb', 
-            base_query = {'object_provides' : IHomepageHeroMarker.__identifier__},
-            show_results_without_query = 1,             
-            label = _(u"Rotator images"),
-            description = _(u"Choose images for rotator."),)),
-    
+
     #===========================================================================
     # Box 1 
     #===========================================================================
@@ -263,7 +258,7 @@ Required size is 468x128px."),)),
     
     ))
 
-HomePageSchema["title"].storage = AnnotationStorage()
-HomePageSchema["description"].storage = AnnotationStorage()
+HomePageSchema["title"].widget.visible = {"edit": "invisible", "view": "invisible"}
+HomePageSchema["description"].widget.visible = {"edit": "invisible", "view": "invisible"}
 
 finalizeATCTSchema(HomePageSchema, moveDiscussion=False)
