@@ -18,45 +18,20 @@
 
         <div tal:replace="structure provider:plone.abovecontenttitle" />
         <div tal:replace="structure provider:plone.belowcontenttitle" />
-        <div tal:replace="structure provider:plone.abovecontentbody" />
             
         <div id="intro">
         
-            <p tal:replace="structure view/html_description">
-                Young Lives is an international study of childhood poverty, 
-                involving 12,000 children in 4 countries over 15 years. 
-                It is led by the University of Oxford in association with 
-                research and policy partners in the 4 study countries: 
-                Ethiopia, India, Peru and Vietnam. </p>
+            <p tal:replace="structure view/html_description" />
                 
             <div class="quote">
                 <blockquote>
-                    <p tal:content="context/getHomeQuote|nothing">
-                        We need to end child poverty in order to break 
-                        the cycle of poverty.
-                    </p>
+                    <p tal:content="context/getHomeQuote|nothing" />
                 </blockquote>
             </div>
             
         </div>
-        
-		<div id="rotator"> 
-				<div class="anythingSlider"> 
-				<div class="wrapper"> 
-				<ul> 
-					<li tal:repeat="item view/rotator_images">
-						<a href="#" alt=""
-						      tal:attributes="href item/getURL">
-							<img src="#" alt=""
-                                     tal:attributes="src string:${item/getURL}/homepageHeroImage;
-                                                              alt item/Description;"/> 
-							<span tal:content="item/Description">Fero voluptua has ut, mei ignota discere comprehensam ad.</span>
-						</a>
-					</li> 
-				</ul> 
-				</div> 
-				</div> 
-			</div>    
+
+	<div tal:replace="structure provider:plone.abovecontentbody" />
     </div>
     
     <div id="younglives-homepage-middle">
@@ -67,7 +42,7 @@
                 	
                     <tal:boxes repeat="box view/boxes">
                     <div class="block">
-                        <h3 tal:content="box/title">What we do</h3>
+                        <h3 tal:content="box/title" />
                         <p><img tal:replace=" structure box/image/tag|nothing" /></p> 
                         <p tal:content="box/description">
                             Young Lives is a long-term international 
@@ -123,6 +98,5 @@
     </div>
         
 </metal:content>
-
 </body>
 </html>
