@@ -28,3 +28,8 @@
     position: relative;
     top: -245px;
 }
+
+.carousel-pager-item-active
+{
+    background-color: white;
+}
