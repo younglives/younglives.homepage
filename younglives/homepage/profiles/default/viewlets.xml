@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<object>
+  <hidden manager="plone.abovecontent" skinname="Young Lives Theme">
+    <viewlet name="Products.Carousel.viewlet" />
+  </hidden>
+</object>

@@ -23,4 +23,12 @@
         permission="zope.Public"
       />
 
+    <browser:viewlet
+        name="Products.Carousel.viewlet"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContentBody"
+        class="Products.Carousel.browser.viewlet.CarouselViewlet"
+        permission="zope2.View"
+        layer=".interfaces.IYounglivesHomepage"
+        />
+
 </configure>
