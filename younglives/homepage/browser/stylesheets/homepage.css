@@ -4,3 +4,20 @@
     font-size: 1.29em;
     width: 466px;
 }
+
+#intro .quote
+{
+    background: url("++resource++younglives.homepage.images/left-quote.png") no-repeat 30px 0;
+    font-weight: bold;
+    padding-left: 50px;
+    padding-right: 60px;
+}
+
+#intro blockquote
+{
+    background: url("++resource++younglives.homepage.images/right-quote.png") no-repeat right bottom;
+    display: inline;
+    padding-right: 20px;
+    font-style: italic;
+    font-size: 120%;
+}

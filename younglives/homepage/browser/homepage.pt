@@ -24,9 +24,7 @@
             <p tal:replace="structure view/html_description" />
                 
             <div class="quote">
-                <blockquote>
-                    <p tal:content="context/getHomeQuote|nothing" />
-                </blockquote>
+                <blockquote tal:content="context/getHomeQuote|nothing" />
             </div>
             
         </div>
