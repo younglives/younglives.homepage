@@ -31,22 +31,4 @@
         layer=".interfaces.IYounglivesHomepage"
         />
 
-    <browser:viewlet
-        name="younglives.homepage-footer"
-	for="younglives.homepage.interfaces.IHomePage"
-        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-        class=".footer.FooterViewlet"
-	template="footer.pt"
-        layer="younglives.homepage.browser.interfaces.IYounglivesHomepage"
-        permission="zope2.View" />
-
-    <browser:viewlet
-        name="younglives.homepage-footer"
-	for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-        class=".footer.FooterViewlet"
-	template="footer.pt"
-        layer="younglives.homepage.browser.interfaces.IYounglivesHomepage"
-        permission="zope2.View" />
-
 </configure>
