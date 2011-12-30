@@ -18,16 +18,16 @@ from younglives.content.interfaces import IHomepageBoxMarker, IHomepageHeroMarke
 
 HomePageSchema = ATContentTypeSchema.copy() + Schema((
 
-    TextField('text',
-        required=True,
-        searchable=True,
-        validators = ('isTidyHtmlWithCleanup',),
-        default_output_type = 'text/x-html-safe',
-        widget = RichWidget(
-            description = '',
-            label = _(u'label_body_text', default=u'Body Text'),
-            rows = 25,),
-    ),
+    #TextField('text',
+        #required=True,
+        #searchable=True,
+        #validators = ('isTidyHtmlWithCleanup',),
+        #default_output_type = 'text/x-html-safe',
+        #widget = RichWidget(
+            #description = '',
+            #label = _(u'label_body_text', default=u'Body Text'),
+            #rows = 25,),
+    #),
 
     StringField("homeQuote",
         required = 0,

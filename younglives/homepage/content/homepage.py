@@ -27,6 +27,7 @@ class HomePage(ATCTContent):
 
     def Description(self):
         """Return description based on full description"""
+        return ''
         description = self.text
         if not description:
             return ''
