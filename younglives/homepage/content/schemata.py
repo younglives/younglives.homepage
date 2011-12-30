@@ -1,9 +1,9 @@
-from Products.Archetypes.atapi import AnnotationStorage
 from Products.Archetypes.atapi import ImageField
 from Products.Archetypes.atapi import ImageWidget
 from Products.Archetypes.atapi import ReferenceField
 from Products.Archetypes.atapi import RichWidget
 from Products.Archetypes.atapi import Schema
+from Products.Archetypes.atapi import StringField
 from Products.Archetypes.atapi import StringWidget
 from Products.Archetypes.atapi import TextAreaWidget
 from Products.Archetypes.atapi import TextField
@@ -19,9 +19,8 @@ from younglives.content.interfaces import IHomepageBoxMarker, IHomepageHeroMarke
 HomePageSchema = ATContentTypeSchema.copy() + Schema((
 
     TextField('text',
-        required=False,
+        required=True,
         searchable=True,
-        primary=True,
         validators = ('isTidyHtmlWithCleanup',),
         default_output_type = 'text/x-html-safe',
         widget = RichWidget(
@@ -30,11 +29,10 @@ HomePageSchema = ATContentTypeSchema.copy() + Schema((
             rows = 25,),
     ),
 
-    TextField("homeQuote",
+    StringField("homeQuote",
         required = 0,
         searchable = 1,
         languageIndependent = 1,
-        storage = AnnotationStorage(),
         widget = TextAreaWidget(
             label = _(u"homepage_quote_label",
                       default = u"Quote"),
@@ -50,7 +48,6 @@ HomePageSchema = ATContentTypeSchema.copy() + Schema((
                     schemata = 'Box1',
                     searchable = 1,
                     languageIndependent = 1,
-                    storage = AnnotationStorage(),
                     widget = StringWidget(
                         label = _(u"homepage_box1-title_label",
                           default = u"Box 1 title"),
@@ -61,7 +58,6 @@ HomePageSchema = ATContentTypeSchema.copy() + Schema((
                          required = 0,
                          schemata = 'Box1',
                          languageIndependent = 0,
-                         storage = AnnotationStorage(),
                          widget = TextAreaWidget(
                            label = _(u"homepage_box1-desc_label",
                              default = u"Box 1 description"),
@@ -76,7 +72,6 @@ HomePageSchema = ATContentTypeSchema.copy() + Schema((
                     original_size = (222, 87),
                     validsizes = (222, 87),
                     validators = ("checkImageSize",),
-                    storage = AnnotationStorage(),
                     widget = ImageWidget(
                         label = _(u"homepage_box1-image_label",
                           default = u"Box 1 image"),
@@ -89,7 +84,6 @@ Required size is 222x87px."),)),
                          schemata = 'Box1',
                          multiValued = 1,
                          languageIndependent = 0,
-                         storage = AnnotationStorage(),
                          relationship = "homepageRelatedBox1Links",
                          widget = ReferenceBrowserWidget(
                            allow_sorting = 1,
@@ -109,7 +103,6 @@ Required size is 222x87px."),)),
                     schemata = 'Box2',
                     searchable = 1,
                     languageIndependent = 1,
-                    storage = AnnotationStorage(),
                     widget = StringWidget(
                         label = _(u"homepage_box2-title_label",
                           default = u"Box 2 title"),
@@ -120,7 +113,6 @@ Required size is 222x87px."),)),
                          required = 0,
                          schemata = 'Box2',
                          languageIndependent = 0,
-                         storage = AnnotationStorage(),
                          widget = TextAreaWidget(
                            label = _(u"homepage_box2-desc_label",
                              default = u"Box 2 description"),
@@ -135,7 +127,6 @@ Required size is 222x87px."),)),
                     original_size = (222, 87),
                     validsizes = (222, 87),
                     validators = ("checkImageSize",),
-                    storage = AnnotationStorage(),
                     widget = ImageWidget(
                         label = _(u"homepage_box2-image_label",
                           default = u"Box 2 image"),
@@ -148,7 +139,6 @@ Required size is 222x87px."),)),
                          schemata = 'Box2',
                          multiValued = 1,
                          languageIndependent = 0,
-                         storage = AnnotationStorage(),
                          relationship = "homepageRelatedBox2Links",
                          widget = ReferenceBrowserWidget(
                            allow_sorting = 1,
@@ -167,7 +157,6 @@ Required size is 222x87px."),)),
                     schemata = 'Box3',
                     searchable = 1,
                     languageIndependent = 1,
-                    storage = AnnotationStorage(),
                     widget = StringWidget(
                         label = _(u"homepage_box3-title_label",
                           default = u"Box 3 title"),
@@ -178,7 +167,6 @@ Required size is 222x87px."),)),
                          required = 0,
                          schemata = 'Box3',
                          languageIndependent = 0,
-                         storage = AnnotationStorage(),
                          widget = TextAreaWidget(
                            label = _(u"homepage_box3-desc_label",
                              default = u"Box 3 description"),
@@ -193,7 +181,6 @@ Required size is 222x87px."),)),
                     original_size = (222, 87),
                     validsizes = (222, 87),
                     validators = ("checkImageSize",),
-                    storage = AnnotationStorage(),
                     widget = ImageWidget(
                         label = _(u"homepage_box3-image_label",
                           default = u"Box 3 image"),
@@ -206,7 +193,6 @@ Required size is 222x87px."),)),
                          schemata = 'Box3',
                          multiValued = 1,
                          languageIndependent = 0,
-                         storage = AnnotationStorage(),
                          relationship = "homepageRelatedBox3Links",
                          widget = ReferenceBrowserWidget(
                            allow_sorting = 1,
@@ -248,7 +234,6 @@ on homepage news section."),)),
         original_size = (468, 128),
         validsizes = (468, 128),
         validators = ("checkImageSize",),
-        storage = AnnotationStorage(),
         widget = ImageWidget(
             label = _(u"homepage-footer-image_label",
                       default = u"Image"),
