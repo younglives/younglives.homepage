@@ -29,7 +29,7 @@
             
         </div>
 
-	<div tal:replace="structure provider:plone.abovecontentbody" />
+        <div tal:replace="structure provider:plone.abovecontentbody" />
     </div>
     
     <div id="younglives-homepage-middle">
@@ -37,7 +37,7 @@
             <div class="wrapper">
             
                 <div class="home-blocks">
-                	
+
                     <tal:boxes repeat="box view/boxes">
                     <div class="block">
                         <h3 tal:content="box/title" />
