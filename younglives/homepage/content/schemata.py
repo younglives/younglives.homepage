@@ -18,16 +18,18 @@ from younglives.content.interfaces import IHomepageBoxMarker, IHomepageHeroMarke
 
 HomePageSchema = ATContentTypeSchema.copy() + Schema((
 
-    #TextField('text',
-        #required=True,
-        #searchable=True,
-        #validators = ('isTidyHtmlWithCleanup',),
-        #default_output_type = 'text/x-html-safe',
-        #widget = RichWidget(
-            #description = '',
-            #label = _(u'label_body_text', default=u'Body Text'),
-            #rows = 25,),
-    #),
+    TextField('text',
+              required=False,
+              searchable=True,
+              primary=True,
+              validators = ('isTidyHtmlWithCleanup',),
+              #validators = ('isTidyHtml',),
+              default_output_type = 'text/x-html-safe',
+              widget = RichWidget(
+                        description = '',
+                        label = _(u'label_body_text', default=u'Body Text'),
+                        rows = 25,),
+    ),
 
     StringField("homeQuote",
         required = 0,
@@ -77,7 +79,7 @@ HomePageSchema = ATContentTypeSchema.copy() + Schema((
                           default = u"Box 1 image"),
                         description = _(u"homepage_box1-image_desc",
                           default = u"Upload image for first homepage box. \
-Required size is 222x87px."),)),                          
+Required size is 222x87px."),)),
 
     OrderableReferenceField("box1Links",
                          required = 0,
@@ -132,7 +134,7 @@ Required size is 222x87px."),)),
                           default = u"Box 2 image"),
                         description = _(u"homepage_box2-image_desc",
                           default = u"Upload image for first homepage box. \
-Required size is 222x87px."),)),                          
+Required size is 222x87px."),)),
 
     OrderableReferenceField("box2Links",
                          required = 0,
@@ -186,7 +188,7 @@ Required size is 222x87px."),)),
                           default = u"Box 3 image"),
                         description = _(u"homepage_box3-image_desc",
                           default = u"Upload image for first homepage box. \
-Required size is 222x87px."),)),                          
+Required size is 222x87px."),)),
 
     OrderableReferenceField("box3Links",
                          required = 0,
