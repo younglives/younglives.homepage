@@ -22,12 +22,11 @@ class HomePage(ATCTContent):
     def Title(self):
         """Return the portal title as the home page title"""
         portal_object = getToolByName(self, 'portal_url').getPortalObject()
-        portal_title = escape(safe_unicode(portal_object.title))
-        return portal_title
+        return portal_object.title
 
     def Description(self):
         """Return description based on full description"""
-        description = self.text
+        description = self.text()
         if not description:
             return ''
         tansform_tool = getToolByName(self, 'portal_transforms')
