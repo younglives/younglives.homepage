@@ -33,3 +33,18 @@
 {
     background-color: white;
 }
+
+#home-blocks h3
+{
+    color: #837562;
+    font-size: 180%;
+    margin-bottom: 12px;
+}
+
+div.news-list ul li {
+    background: url("++resource++younglives.homepage.images/bg-nav-border.png") repeat-x scroll left bottom transparent;
+    list-style-type: none;
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+    display: list-item;
+}
