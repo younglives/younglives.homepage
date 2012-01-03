@@ -29,8 +29,8 @@ class HomePage(ATCTContent):
         description = self.text()
         if not description:
             return ''
-        tansform_tool = getToolByName(self, 'portal_transforms')
-        description = tansform_tool.convert('html_to_text', description).getData()
+        transform_tool = getToolByName(self, 'portal_transforms')
+        description = transform_tool.convert('html_to_text', description).getData()
         description = description.strip()
         if len(description) > 150:
             return description[:150] + '...'
