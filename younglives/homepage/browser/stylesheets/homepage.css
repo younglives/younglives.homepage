@@ -55,6 +55,25 @@
     margin-bottom: 12px;
 }
 
+.home-blocks p
+{
+    margin-bottom: 1em;
+    color: #484848;
+}
+
+ul.arrow-list li
+{
+    background: url("++resource++younglives.homepage.images/bg-nav-border.png") repeat-x scroll left bottom transparent;
+    display: list-item;
+}
+
+ul.arrow-list li a
+{
+    background: url("++resource++younglives.homepage.images/bg-nav.png") no-repeat scroll 0 -46px transparent;
+    display: block;
+    padding: 8px 10px 8px 13px;
+}
+
 div.news-list ul li {
     background: url("++resource++younglives.homepage.images/bg-nav-border.png") repeat-x scroll left bottom transparent;
     list-style-type: none;
