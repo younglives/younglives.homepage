@@ -35,6 +35,19 @@
     background-color: white;
 }
 
+#younglives-homepage-boxes
+{
+    width: 990px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.home-blocks .block {
+    float: left;
+    margin-right: 25px;
+    width: 222px;
+}
+
 #home-blocks h3
 {
     color: #837562;
