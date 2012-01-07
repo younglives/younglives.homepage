@@ -68,7 +68,3 @@ class HomePageView(BrowserView):
                 image = eval("self.context.getBox%sImage()" % box),
                 links = [{'title':x.Title,'url':x.absolute_url} for x in links],))
         return results
-
-    def rotator_images(self):
-        ctool = getToolByName(self.context, 'portal_catalog')
-        return ctool(UID=self.context.getRawHomeRotatorImages())
