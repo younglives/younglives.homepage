@@ -13,88 +13,67 @@
 </head>
 
 <metal:content fill-slot="main">
-
     <div id="younglives-homepage-top">
-
         <div tal:replace="structure provider:plone.abovecontenttitle" />
         <div tal:replace="structure provider:plone.belowcontenttitle" />
-            
         <div id="intro">
-        
             <p tal:content="structure context/text|nothing" />
-                
             <div class="quote">
                 <blockquote tal:content="context/getHomeQuote|nothing" />
             </div>
-            
         </div>
-
         <div tal:replace="structure provider:plone.abovecontentbody" />
     </div>
-    
     <div id="younglives-homepage-middle">
         <div id="home-blocks">
             <div class="wrapper">
-            
                 <div class="home-blocks">
-
                     <tal:boxes repeat="box view/boxes">
                     <div class="block">
                         <h3 tal:content="box/title" />
-                        <p><img tal:replace=" structure box/image/tag|nothing" /></p> 
-                        <p tal:content="box/description">
-                            Young Lives is a long-term international 
-                            research project investigating the changing 
-                            nature of childhood poverty
-                        </p>
+                        <p><img tal:replace=" structure box/image/tag|nothing" /></p>
+                        <p tal:content="box/description" />
                         <ul class="arrow-list">
                             <li tal:repeat="link box/links"
                                 tal:attributes="class python:repeat['link'].end and 'last' or ''"
-                                ><a href="" title=""
-                                    tal:attributes="href link/url;
-                                                            title link/title"
+                                ><a tal:attributes="href link/url;
+                                                    title link/title"
                                     tal:content="link/title">
                                 Our policy work</a></li>
                         </ul>
                     </div>
                     </tal:boxes>
-                    
                     <tal:news define="news view/homepage_news"
                               condition="news">
                     <div class="block">
                         <h3 tal:content="news/title">What's new</h3>
                         <p><img src="" width="222" height="87" alt="" 
                                 tal:attributes="src string:${news/url}/homepageBoxImage;
-                                                        alt news/title" /></p>
+                                                alt news/title" /></p>
                         <div class="news-list">
                             <ul>
                                 <li tal:repeat="link news/links"
                                      tal:attributes="class python:repeat['link'].end and 'last' or ''"
-                                    ><a href="" title=""
-                                            tal:attributes="href link/url;
-                                                                    title link/title"
-                                            tal:content="link/title">
+                                    ><a tal:attributes="href link/url;
+                                                        title link/title"
+                                        tal:content="link/title">
                                         Our policy work</a>
                                     <span class="date" 
-                                               tal:content="python:context.toLocalizedTime(link['date'],long_format=0)">
-                                    2nd June 2010</span></li>
-                                <li class="last"><a href="#" title=""
-                                                               tal:attributes="href string:${context/portal_url}//who-we-are/contact-details"
-                                                               >&copy; Media enquiries &amp; contacts</a></li>
+                                          tal:content="python:context.toLocalizedTime(link['date'],long_format=0)" />
+                                </li>
+                                <li class="last">
+                                    <a tal:attributes="href string:${context/portal_url}//who-we-are/contact-details"
+                                        >&copy; Media enquiries &amp; contacts</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                     </tal:news>
-                    
                 </div>
-                
-            </div>  
+            </div>
         </div>
-        
         <div tal:replace="structure provider:plone.belowcontentbody" />
-        
     </div>
-        
 </metal:content>
 </body>
 </html>
