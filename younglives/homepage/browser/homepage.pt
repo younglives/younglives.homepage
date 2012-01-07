@@ -38,8 +38,8 @@
                                 tal:attributes="class python:repeat['link'].end and 'last' or ''"
                                 ><a tal:attributes="href link/url;
                                                     title link/title"
-                                    tal:content="link/title">
-                                Our policy work</a></li>
+                                    tal:content="link/title" />
+                            </li>
                         </ul>
                     </div>
                     </tal:boxes>
@@ -56,13 +56,12 @@
                                      tal:attributes="class python:repeat['link'].end and 'last' or ''"
                                     ><a tal:attributes="href link/url;
                                                         title link/title"
-                                        tal:content="link/title">
-                                        Our policy work</a>
+                                        tal:content="link/title" />
                                     <span class="date" 
                                           tal:content="python:context.toLocalizedTime(link['date'],long_format=0)" />
                                 </li>
                                 <li class="last">
-                                    <a tal:attributes="href string:${context/portal_url}//who-we-are/contact-details"
+                                    <a tal:attributes="href string:${context/portal_url}/who-we-are/contact-details"
                                         >&copy; Media enquiries &amp; contacts</a>
                                 </li>
                             </ul>
