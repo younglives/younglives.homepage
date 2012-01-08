@@ -58,7 +58,7 @@
                                                         title link/title"
                                         tal:content="link/title" />
                                     <span class="date" 
-                                          tal:content="python:context.toLocalizedTime(link['date'],long_format=0)" />
+                                          tal:content="python:view.toLocalizedTime(link['date'])" />
                                 </li>
                                 <li class="last">
                                     <a tal:attributes="href string:${context/portal_url}/who-we-are/contact-details"
