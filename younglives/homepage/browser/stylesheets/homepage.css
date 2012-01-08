@@ -35,14 +35,17 @@
     background-color: white;
 }
 
-#younglives-homepage-boxes
+#younglives-homepage-boxes,
+#footer-wrapper
 {
     width: 990px;
     margin-left: 0;
     margin-right: 0;
 }
 
-.home-blocks .block {
+.home-blocks .block,
+#footer-wrapper .block
+{
     float: left;
     margin-right: 25px;
     width: 222px;
