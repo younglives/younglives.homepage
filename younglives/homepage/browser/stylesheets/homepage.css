@@ -35,6 +35,16 @@
     background-color: white;
 }
 
+.carousel-body
+{
+    font-size: 120%;
+}
+
+#carousel-homepage .carousel-body p
+{
+    margin-bottom: 0;
+}
+
 #younglives-homepage-boxes,
 #footer-wrapper
 {
