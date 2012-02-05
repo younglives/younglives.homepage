@@ -36,14 +36,19 @@
     background-color: white;
 }
 
-.carousel-body
-{
-    font-size: 120%;
-}
-
 #carousel-homepage .carousel-body p
 {
     margin-bottom: 0;
+    font-size: 120%;
+}
+
+.carousel-text
+{
+    opacity: 0.9;
+    padding: 5px;
+    width: 100%;
+    color: #313A41;
+    background-color: #EEEEEE;
 }
 
 #younglives-homepage-boxes
