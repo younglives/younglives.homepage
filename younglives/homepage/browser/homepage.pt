@@ -14,15 +14,18 @@
 
 <metal:content fill-slot="main">
     <div id="younglives-homepage-top">
-        <div tal:replace="structure provider:plone.abovecontenttitle" />
-        <div tal:replace="structure provider:plone.belowcontenttitle" />
-        <div id="intro">
+        <div class="grid_24">
+            <div tal:replace="structure provider:plone.belowcontenttitle" />
+        </div>
+        <div id="intro" class="grid_12">
             <p tal:content="structure context/text|nothing" />
             <div class="quote">
                 <blockquote tal:content="context/getHomeQuote|nothing" />
             </div>
         </div>
-        <div tal:replace="structure provider:plone.abovecontentbody" />
+        <div class="grid_12">
+            <div tal:replace="structure provider:plone.abovecontentbody" />
+        </div>
     </div>
     <div id="younglives-homepage-middle">
         <div id="home-blocks">

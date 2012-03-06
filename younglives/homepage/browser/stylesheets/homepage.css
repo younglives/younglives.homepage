@@ -1,8 +1,6 @@
 #intro {
     color: #555555;
-    float: left;
     font-size: 1.29em;
-    width: 466px;
     margin-bottom: 2em;
     font-size: 160%;
     line-height: 1.2;
@@ -22,6 +20,11 @@
     display: inline;
     padding-right: 20px;
     font-style: italic;
+}
+
+.carousel-banners
+{
+    margin-left: 2px;
 }
 
 .carousel-pager
