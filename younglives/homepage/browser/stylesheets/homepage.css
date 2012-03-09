@@ -72,8 +72,9 @@
 #home-blocks h3
 {
     color: #837562;
-    font-size: 180%;
+    font-size: 174%;
     margin-bottom: 12px;
+    font-weight: normal;
 }
 
 .home-blocks p
