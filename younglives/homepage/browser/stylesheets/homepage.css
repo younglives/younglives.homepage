@@ -87,6 +87,7 @@ ul.arrow-list li
 {
     background: url("++resource++younglives.homepage.images/bg-nav-border.png") repeat-x scroll left bottom transparent;
     display: list-item;
+    font-size: 97%;
 }
 
 ul.arrow-list li a
@@ -102,5 +103,5 @@ div.news-list ul li {
     margin-bottom: 4px;
     padding-bottom: 4px;
     display: list-item;
-    font-size: 0.93em;
+    font-size: 106%;
 }
