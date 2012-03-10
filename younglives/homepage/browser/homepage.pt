@@ -18,7 +18,7 @@
             <div tal:replace="structure provider:plone.belowcontenttitle" />
         </div>
         <div id="intro" class="grid_12">
-            <p tal:content="structure context/text|nothing" />
+            <div tal:content="structure context/text|nothing" />
             <div class="quote">
                 <blockquote tal:content="context/getHomeQuote|nothing" />
             </div>
