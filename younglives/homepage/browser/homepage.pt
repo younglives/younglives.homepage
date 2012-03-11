@@ -32,7 +32,7 @@
             <div class="wrapper">
                 <div class="home-blocks">
                     <tal:boxes repeat="box view/boxes">
-                    <div class="block">
+                    <div class="grid_6 block">
                         <h3 tal:content="box/title" />
                         <p><img tal:replace=" structure box/image/tag|nothing" /></p>
                         <p tal:content="box/description" />
@@ -48,7 +48,7 @@
                     </tal:boxes>
                     <tal:news define="news view/homepage_news"
                               condition="news">
-                    <div class="block">
+                    <div class="grid_6 block">
                         <h3 tal:content="news/title">What's new</h3>
                         <p><img src="" width="222" height="87" alt="" 
                                 tal:attributes="src string:${news/url}/homepageBoxImage;
