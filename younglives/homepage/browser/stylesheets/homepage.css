@@ -1,8 +1,14 @@
-#intro {
+#portal-column-content #content #intro
+{
     color: #555555;
     font-size: 1.29em;
-    font-size: 156%;
     line-height: 1.2;
+}
+
+#portal-column-content #content #intro p,
+#portal-column-content #content #intro blockquote
+{
+    font-size: 121%;
 }
 
 #intro .quote
