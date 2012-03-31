@@ -20,7 +20,7 @@
         name="homepage_view"
         class=".homepage.HomePageView"
         template="homepage.pt"
-        permission="zope.Public"
+        permission="zope2.View"
       />
 
     <browser:viewlet
