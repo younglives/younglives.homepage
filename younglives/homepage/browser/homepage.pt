@@ -50,7 +50,7 @@
                               condition="news">
                     <div class="grid_6 block">
                         <h3 tal:content="news/title">What's new</h3>
-                        <p><img src="++theme++younglives.theme/images/footer-whats-new.jpg"
+                        <p><img src="++theme++younglives.theme/images/footer_whats_new.jpg"
                                 width="222" height="87" alt="" /></p>
                         <div class="news-list">
                             <ul>
