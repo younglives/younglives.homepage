@@ -50,9 +50,8 @@
                               condition="news">
                     <div class="grid_6 block">
                         <h3 tal:content="news/title">What's new</h3>
-                        <p><img src="" width="222" height="87" alt="" 
-                                tal:attributes="src string:${news/url}/homepageBoxImage;
-                                                alt news/title" /></p>
+                        <p><img src="++theme++younglives.theme/images/footer-whats-new.jpg"
+                                width="222" height="87" alt="" /></p>
                         <div class="news-list">
                             <ul>
                                 <li tal:repeat="link news/links"
