@@ -7,11 +7,6 @@
       i18n:domain="younglives.policy">
 <body>
 
-<head>
-    <metal:block fill-slot="column_one_slot" />
-    <metal:block fill-slot="column_two_slot" />
-</head>
-
 <metal:content fill-slot="main">
     <div id="younglives-homepage-top">
         <div class="grid_24">
