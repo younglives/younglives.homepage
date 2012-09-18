@@ -1,8 +1,11 @@
 Changelog
 =========
 
-1.0.2 Unreleased
+1.0.2 2012/09/18
 ----------------
+
+ - Fix the footer link
+ - Readd the whats new image
 
 1.0.1 2012/04/09
 ----------------
