@@ -10,8 +10,7 @@ from Products.Five import BrowserView
 from plone.memoize import view
 
 # local
-from interfaces import IHomePageView 
-from younglives.content.interfaces import IHomepageBoxAware, IHomepageHeroMarker
+from interfaces import IHomePageView
 
 class HomePageView(BrowserView):
     implements(IHomePageView)
@@ -21,38 +20,19 @@ class HomePageView(BrowserView):
         portal_transforms = getToolByName(self.context, 'portal_transforms')
         return portal_transforms.convert('text_to_html', 
                                          self.context.Description())
-        
-    @view.memoize   
-    def homepage_boxes(self):
-        items = []
-        home_boxes_ref = self.context.getHomeBoxes()
-        for box_ref in home_boxes_ref:
-            if IHomepageBoxAware.providedBy(box_ref):
-                item = dict(title = box_ref.Title(),
-                            url = box_ref.absolute_url(),
-                            description = box_ref.Description(),
-                            links = [])
-                brains = box_ref.queryCatalog()
-                for brain in brains:
-                    item['links'].append(dict(title = brain.Title,
-                                              url = brain.getURL(),))                            
-                items.append(item)
-        
-        return items
-  
+
     @view.memoize 
     def homepage_news(self):
         item = None
         home_news_ref = self.context.getHomeNews()
-        if IHomepageBoxAware.providedBy(home_news_ref):
-            item = dict(title = home_news_ref.Title(),
-                        url = home_news_ref.absolute_url(),
-                        links = [])
-            brains = home_news_ref.queryCatalog()
-            for brain in brains:
-                item['links'].append(dict(title = brain.Title,
-                                          url = brain.getURL(),
-                                          date = brain.Date))
+        item = dict(title = home_news_ref.Title(),
+                    url = home_news_ref.absolute_url(),
+                    links = [])
+        brains = home_news_ref.queryCatalog()
+        for brain in brains:
+            item['links'].append(dict(title = brain.Title,
+                                        url = brain.getURL(),
+                                        date = brain.Date))
         
         return item
 

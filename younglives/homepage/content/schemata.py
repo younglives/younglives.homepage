@@ -9,12 +9,12 @@ from Products.Archetypes.atapi import TextAreaWidget
 from Products.Archetypes.atapi import TextField
 from Products.ATContentTypes.content.schemata import ATContentTypeSchema
 from Products.ATContentTypes.content.schemata import finalizeATCTSchema
+from Products.ATContentTypes.interfaces.topic import IATTopic
 
 from archetypes.referencebrowserwidget.widget import ReferenceBrowserWidget
 from Products.OrderableReferenceField import OrderableReferenceField, OrderableReferenceWidget
 
 from younglives.homepage import _
-from younglives.content.interfaces import IHomepageBoxMarker, IHomepageHeroMarker
 
 HomePageSchema = ATContentTypeSchema.copy() + Schema((
 
@@ -220,7 +220,7 @@ Required size is 222x87px."),)),
             show_review_state = 1,
             image_portal_types = ('Collection',),
             image_method = '++atfield++homepageBoxImage-thumb', 
-            base_query = {'object_provides' : IHomepageBoxMarker.__identifier__},
+            base_query = {'object_provides' : IATTopic.__identifier__},
             show_results_without_query = 1,
             label = _(u"homepage_news_label", 
                       default = u"News"),
