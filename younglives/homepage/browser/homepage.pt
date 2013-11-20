@@ -58,8 +58,8 @@
                                           tal:content="python:view.toLocalizedTime(link['date'])" />
                                 </li>
                                 <li class="last">
-                                    <a tal:attributes="href string:${context/portal_url}/who-we-are/media-enquiries"
-                                        >&copy; Media enquiries &amp; contacts</a>
+                                    <a tal:attributes="href string:${context/portal_url}/news/media-centre"
+                                        >Media Centre</a>
                                 </li>
                             </ul>
                         </div>
