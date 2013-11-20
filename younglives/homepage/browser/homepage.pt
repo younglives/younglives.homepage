@@ -59,7 +59,7 @@
                                 </li>
                                 <li class="last">
                                     <a tal:attributes="href string:${context/portal_url}/news/media-centre"
-                                        >Media Centre</a>
+                                        >MEDIA CENTRE</a>
                                 </li>
                             </ul>
                         </div>
