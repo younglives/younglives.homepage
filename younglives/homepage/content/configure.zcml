@@ -3,6 +3,4 @@
     xmlns:five="http://namespaces.zope.org/five"
     i18n_domain="younglives.homepage">
 
-  <include file="events.zcml"/>
-
 </configure>
