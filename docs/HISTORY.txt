@@ -3,6 +3,8 @@ Changelog
 
 1.0.3 Unreleased
 ----------------
+ - Remove the homepage hero
+ - Fix links
 
 1.0.2 2012/09/18
 ----------------
