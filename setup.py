@@ -1,18 +1,22 @@
 from setuptools import setup, find_packages
 import os
 
-version = open(os.path.join("younglives", "homepage", "version.txt")).read().strip()
+version_path = os.path.join("younglives", "homepage", "version.txt")
+
+version = open(version_path).read().strip()
+
+long_description = open(os.path.join("docs", "README.txt")).read()
+long_description += "\n" + open(os.path.join("docs", "INSTALL.txt")).read()
+long_description += "\n" + open(os.path.join("docs", "HISTORY.txt")).read()
 
 setup(name='younglives.homepage',
       version=version,
       description="",
-      long_description=open(os.path.join("docs", "README.txt")).read() + "\n" +
-                       open(os.path.join("docs", "INSTALL.txt")).read() + "\n" +
-                       open(os.path.join("docs", "HISTORY.txt")).read(),
+      long_description=long_description,
       classifiers=[
-        "Framework :: Plone",
-        "Programming Language :: Python",
-        ],
+          "Framework :: Plone",
+          "Programming Language :: Python",
+      ],
       keywords='',
       author='Michael Davis',
       author_email='m.r.davis@cranfield.ac.uk',
@@ -33,4 +37,4 @@ setup(name='younglives.homepage',
       [z3c.autoinclude.plugin]
       target = plone
       """,
-)
+      )
