@@ -5,7 +5,7 @@ from Products.CMFCore.utils import ContentInit
 from zope.i18nmessageid import MessageFactory
 _ = MessageFactory('younglives.homepage')
 
-import content.homepage.HomePage  # noqa
+from younglives.homepage.content.homepage import HomePage  # noqa
 from younglives.homepage.config import ADD_PERMISSIONS
 from younglives.homepage.config import PROJECTNAME
 

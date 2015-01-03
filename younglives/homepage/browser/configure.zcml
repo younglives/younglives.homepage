@@ -15,8 +15,8 @@
       layer=".interfaces.IYounglivesHomepage"
       />
 
-    <browser:page 
-        for="younglives.homepage.interfaces.IHomePage"
+    <browser:page
+        for="younglives.homepage.interfaces.homepage.IHomePage"
         name="homepage_view"
         class=".homepage.HomePageView"
         template="homepage.pt"

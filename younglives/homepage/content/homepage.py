@@ -5,7 +5,7 @@ from Products.ATContentTypes.content.base import ATCTContent
 from Products.CMFCore.utils import getToolByName
 
 from younglives.homepage.config import PROJECTNAME
-from younglives.homepage.interfaces import IHomePage
+from younglives.homepage.interfaces.homepage import IHomePage
 
 from schemata import HomePageSchema
 
