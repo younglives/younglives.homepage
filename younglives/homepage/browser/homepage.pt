@@ -54,7 +54,7 @@
                                     ><a tal:attributes="href link/url;
                                                         title link/title"
                                         tal:content="link/title" />
-                                    <span class="date" 
+                                    <span class="pub_date"
                                           tal:content="python:view.toLocalizedTime(link['date'])" />
                                 </li>
                                 <li class="last">
