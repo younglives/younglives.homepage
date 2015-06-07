@@ -31,18 +31,6 @@ HomePageSchema = ATContentTypeSchema.copy() + Schema((
             rows=25,),
         ),
 
-    StringField(
-        'homeQuote',
-        required=0,
-        searchable=1,
-        languageIndependent=1,
-        widget=TextAreaWidget(
-            label=_(u"homepage_quote_label",
-                    default=u"Quote"),
-            description=_(u"subsite_quote_desc",
-                          default=u"Enter homepage quote."),
-            rows=2)),
-
     # ========================================================================
     # Box 1
     # ========================================================================

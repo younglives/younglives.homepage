@@ -14,9 +14,6 @@
         </div>
         <div id="intro" class="grid_12">
             <div tal:content="structure context/text|nothing" />
-            <div class="quote">
-                <blockquote tal:content="context/getHomeQuote|nothing" />
-            </div>
         </div>
         <div class="grid_12">
             <div tal:replace="structure provider:plone.abovecontentbody" />
